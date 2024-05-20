@@ -2,6 +2,8 @@ package com.calculatormain;
 
 import java.util.Scanner;
 
+import com.arithmatic.ActualCalculationImpl;
+
 public class OptionChoiceImpl implements OptionChoice {
 
 	@Override
@@ -16,7 +18,8 @@ public class OptionChoiceImpl implements OptionChoice {
 	public void optionNum(int num) {
 		switch(num) {
 		case 1:
-			System.out.println("addition");
+			ActualCalculationImpl actualCalc = new ActualCalculationImpl();
+			actualCalc.addition();
 			break;
 		case 2:
 			System.out.println("subtraction");
