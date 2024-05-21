@@ -6,10 +6,10 @@ public interface ActualCalculation {
 	public void multiplication();
 	public void division();
 	public void modulus();
-	public void square(int num);
-	public void cube(int num);
+	public void square();
+	public void cube();
 	public void average();
 	public void factors();
-	public void evenOdd(int num);
+	public void evenOdd();
 
 }

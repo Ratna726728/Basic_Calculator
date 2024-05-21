@@ -16,25 +16,26 @@ public class OptionChoiceImpl implements OptionChoice {
 
 	@Override
 	public void optionNum(int num) {
+		ActualCalculationImpl actualCalc = new ActualCalculationImpl();
 		switch(num) {
 		case 1:
-			ActualCalculationImpl actualCalc = new ActualCalculationImpl();
+			
 			actualCalc.addition();
 			break;
 		case 2:
-			System.out.println("subtraction");
+			actualCalc.subtraction();
 			break;
 		case 3:
-			System.out.println("multiplication");
+			actualCalc.multiplication();
 			break;
 		case 4:
-			System.out.println("division");
+			actualCalc.division();
 			break;
 		case 5:
-			System.out.println("modulus");
+			actualCalc.modulus();
 			break;
 		case 6:
-			System.out.println("square");
+			actualCalc.square();
 			break;
 		case 7:
 			System.out.println("cube");
