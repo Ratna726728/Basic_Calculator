@@ -10,10 +10,10 @@ public class ActualCalculationImpl implements ActualCalculation{
 		System.out.println("How many numbers you want to add :");
 		int n = scanner.nextInt();
 		//creating an array for storing user input
-		int addArr[]= new int[n];
+		float addArr[]= new float[n];
 		for(int i=0;i<n;i++) {
 			System.out.print("Enter the "+i+" number : ");
-			addArr[i]=scanner.nextInt();
+			addArr[i]=scanner.nextFloat();
 		}
 		// Print the elements of the array
 		System.out.print("Elements in the array:");
@@ -22,23 +22,22 @@ public class ActualCalculationImpl implements ActualCalculation{
 		}
 		System.out.println();
 		//now let's subtract
-		int addition= addArr[0];
+		float addition= addArr[0];
 		for(int i=1; i<n; i++) {
 			addition += addArr[i];
 		}
 		System.out.println("Addition of the given numbers : "+addition);
 	}
-
-
+	
 	@Override
 	public void subtraction() {
 		System.out.println("How many numbers you want to subtract :");
 		int n = scanner.nextInt();
 		//creating an array for storing user input
-		int subArr[]= new int[n];
+		float subArr[]= new float[n];
 		for(int i=0;i<n;i++) {
 			System.out.print("Enter the "+i+" number : ");
-			subArr[i]=scanner.nextInt();
+			subArr[i]=scanner.nextFloat();
 		}
 		// Print the elements of the array
 		System.out.print("Elements in the array:");
@@ -47,7 +46,7 @@ public class ActualCalculationImpl implements ActualCalculation{
 		}
 		System.out.println();
 		//now let's subtract
-		int subtract= subArr[0];
+		float subtract= subArr[0];
 		for(int i=1;i<n;i++) {
 			subtract -= subArr[i];
 		}
@@ -59,10 +58,10 @@ public class ActualCalculationImpl implements ActualCalculation{
 		System.out.println("How many numbers you want to multiply :");
 		int n = scanner.nextInt();
 		//creating an array for storing user input
-		int multArr[]= new int[n];
+		float multArr[]= new float[n];
 		for(int i=0;i<n;i++) {
 			System.out.print("Enter the "+i+" number : ");
-			multArr[i]=scanner.nextInt();
+			multArr[i]=scanner.nextFloat();
 		}
 		// Print the elements of the array
 		System.out.print("Elements in the array:");
@@ -71,12 +70,11 @@ public class ActualCalculationImpl implements ActualCalculation{
 		}
 		System.out.println();
 		//now let's multiply
-		int multiplication= multArr[0];
+		float multiplication= multArr[0];
 		for(int i=1; i<n; i++) {
 			multiplication *= multArr[i];
 		}
 		System.out.println("Multiplication of the given numbers : "+multiplication);
-
 	}
 
 	@Override
@@ -84,10 +82,10 @@ public class ActualCalculationImpl implements ActualCalculation{
 		System.out.println("How many numbers you want to division :");
 		int n = scanner.nextInt();
 		//creating an array for storing user input
-		int divArr[]= new int[n];
+		float divArr[]= new float[n];
 		for(int i=0;i<n;i++) {
 			System.out.print("Enter the "+i+" number : ");
-			divArr[i]=scanner.nextInt();
+			divArr[i]=scanner.nextFloat();
 		}
 		// Print the elements of the array
 		System.out.print("Elements in the array:");
@@ -96,12 +94,11 @@ public class ActualCalculationImpl implements ActualCalculation{
 		}
 		System.out.println();
 		//now let's divide
-		int division = divArr[0];
+		float division = divArr[0];
 		for(int i=1; i<n; i++) {
 			division /= divArr[i];
 		}
 		System.out.println("division of the given numbers : "+division);
-
 	}
 
 	@Override
@@ -126,36 +123,70 @@ public class ActualCalculationImpl implements ActualCalculation{
 			modulus %= modArr[i];
 		}
 		System.out.println("modulus of the given numbers : "+modulus);
-
 	}
 
 	@Override
 	public void square() {
-		// TODO Auto-generated method stub
-
+		System.out.println("Enter the number for finding the Square: ");
+		int n = scanner.nextInt();
+		System.out.println("The square of the number : "+ (n*n));
 	}
 
 	@Override
 	public void cube() {
-		// TODO Auto-generated method stub
-
+		System.out.println("Enter the number for finding the Cube: ");
+		int n = scanner.nextInt();
+		System.out.println("The cube of the number : "+ (n*n*n));
 	}
 
 	@Override
 	public void average() {
-		// TODO Auto-generated method stub
-
+		System.out.println("Enter the number for finding the average :");
+		int n = scanner.nextInt();
+		//creating an array for storing user input
+		float aveArr[]= new float[n];
+		for(int i=0;i<n;i++) {
+			System.out.print("Enter the "+i+" number : ");
+			aveArr[i]=scanner.nextFloat();
+		}
+		// Print the elements of the array
+		System.out.print("Elements in the array:");
+		for (int i = 0; i < n; i++) {
+			System.out.print(aveArr[i] + " ");
+		}
+		System.out.println();
+		//now let's find modulus
+		float average = aveArr[0];
+		for(int i=1; i<n; i++) {
+			average += aveArr[i];
+		}
+		average=(average)/n;
+		System.out.println("average of the given numbers : "+average);
 	}
 
 	@Override
 	public void factors() {
-		// TODO Auto-generated method stub
-
+		System.out.println("Enter the number for finding the factors :");
+		int n = scanner.nextInt();
+	    System.out.println("The number is defined as " + n);
+	    System.out.print("The factors of " + n + " are: ");
+	    for (int i = 1; i <= n; ++i) {
+	       if (n % i == 0) {
+	          System.out.print(i + " ");
+	       }
+	    }
 	}
 
 	@Override
 	public void evenOdd() {
-		// TODO Auto-generated method stub
+		System.out.println("Enter the number for finding the number is even or odd :");
+		int n = scanner.nextInt();
+		if(n%2==0) {
+			System.out.println("The number "+n+" is a even number.");
+		}
+		else {
+			System.out.println("The number "+n+" is a odd number.");
+		}
 
 	}
 

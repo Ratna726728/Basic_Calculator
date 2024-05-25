@@ -19,7 +19,6 @@ public class OptionChoiceImpl implements OptionChoice {
 		ActualCalculationImpl actualCalc = new ActualCalculationImpl();
 		switch(num) {
 		case 1:
-			
 			actualCalc.addition();
 			break;
 		case 2:
@@ -38,16 +37,16 @@ public class OptionChoiceImpl implements OptionChoice {
 			actualCalc.square();
 			break;
 		case 7:
-			System.out.println("cube");
+			actualCalc.cube();
 			break;
 		case 8:
-			System.out.println("average");
+			actualCalc.average();
 			break;
 		case 9:
-			System.out.println("factors");
+			actualCalc.factors();
 			break;
 		case 10:
-			System.out.println("even or odd");
+			actualCalc.evenOdd();
 			break;
 		}
 	}
